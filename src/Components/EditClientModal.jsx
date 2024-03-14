@@ -73,11 +73,15 @@ const Modal = () => {
                                     <div className="row">
                                         <div className="col-6 mb-3">
                                             <label htmlFor="contactno" className="form-label">Contact No.</label>
-                                            <Input type="tel" value={mobile_number} onChange={(e) => setMobile_number(e.target.value)} id="contactno" className='borderlightgreen' placeholder="Contact No." variant="outlined" required />
+                                            <PhoneInput defaultCountry='india' type="tel" value={mobile_number} onChange={(e) => setMobile_number(e.target.value)} id="contactno" className='borderlightgreen rounded-1' placeholder="Contact No." variant="outlined" required />
                                         </div>
                                         <div className="col-6 mb-3">
                                             <label htmlFor="country" className="form-label" required>Country</label>
-                                            <Input value={country} onChange={(e) => setCountry(e.target.value)} type="text" id="country" className='borderlightgreen' placeholder="Country" variant="outlined" required />
+                                            {/* <Input value={country} onChange={(e) => setCountry(e.target.value)} type="text" id="country" className='borderlightgreen' placeholder="Country" variant="outlined" required /> */}
+                                            <select className="form-select borderlightgreen form-select-sm" aria-label="Default select example" value={country} onChange={(e) => setCountry(e.target.value)}>
+                                                <option selected>Country</option>
+                                                <option value={1}>One</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="row">
@@ -105,7 +109,7 @@ const Modal = () => {
                                     <div className="row">
                                         <div className="mb-3 col-6">
                                             <label htmlFor="contactmobileno">Contact No.</label>
-                                            <Input value={contact_mobile} onChange={(e) => setContact_mobile(e.target.value)} type="tel" className='borderlightgreen' id="contactmobileno" placeholder="Contact No." variant="outlined" required />
+                                            <PhoneInput defaultCountry='india' inputProps={{required:true}} value={contact_mobile} onChange={(e) => setContact_mobile(e.target.value)} type="tel" className='borderlightgreen rounded-1' id="contactmobileno" placeholder="Contact No." variant="outlined" required />
                                         </div>
                                     </div>
                                 </div>

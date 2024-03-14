@@ -92,7 +92,7 @@ const ForgotPassword = () => {
                       // iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                       />
                     </div> */}
-                    <Form>
+                    <Form layout="vertical">
                     <Form.Item
                       name="password"
                       label="Password"
